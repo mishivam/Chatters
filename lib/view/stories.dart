@@ -9,7 +9,7 @@ class _StoriesState extends State<Stories> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      
+      child:Text('This is stories')
     );
   }
 }

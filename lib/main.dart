@@ -1,7 +1,7 @@
 import 'package:chatters/services/authenticate.dart';
 import 'package:chatters/services/sharedPreferenceFunction.dart';
 // import 'package:chatters/view/chatRoomScreen.dart';
-import 'package:chatters/view/mainScreen.dart';
+import 'package:chatters/view/mainPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {

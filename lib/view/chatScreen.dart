@@ -144,25 +144,28 @@ class _ConversationRoomState extends State<ConversationRoom> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.grey.shade900,
     appBar: ChatAppBar(widget.userName),
     body: Stack(children: <Widget>[
+      Center(child: Icon(Icons.message, size: 100, color: Colors.grey.shade800,)),
       Container(
           margin: EdgeInsets.only(top: 8, bottom: 75),
           child: chatMessageList()),
       Container(
         margin: EdgeInsets.symmetric(vertical: 10),
+        
         alignment: Alignment.bottomCenter,
         child: Container(
             padding: EdgeInsets.only(left: 16, bottom: 10, right: 16),
             height: 60,
             width: double.infinity,
             decoration: BoxDecoration(
-                color: Colors.white,
+                color: Colors.indigo.shade300,
                 borderRadius: BorderRadius.circular(50)),
             child: Container(
               margin: EdgeInsets.only(top: 8),
               child: Row(
+              
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     GestureDetector(
@@ -173,7 +176,7 @@ class _ConversationRoomState extends State<ConversationRoom> {
                         height: 40,
                         width: 40,
                         decoration: BoxDecoration(
-                          color: Colors.blueGrey,
+                          color: Colors.grey,
                           borderRadius: BorderRadius.circular(30),
                           // border: Border(top:BorderSide(),bottom:BorderSide(),)
                         ),
@@ -189,22 +192,27 @@ class _ConversationRoomState extends State<ConversationRoom> {
                     ),
                     Expanded(
                       
-                      child: TextField(
-                        controller: messageController,
-                        keyboardType: TextInputType.multiline,
-                        maxLines: null,
-                      
-                        decoration: InputDecoration(
-                          contentPadding: EdgeInsets.symmetric(vertical:8, horizontal: 16),
-                            hintText: "Type message...",
-                            filled: true,
-                            fillColor: Colors.black12,
-                            hintStyle:
-                                TextStyle(color: Colors.black),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30)
-                            )
-                          ),
+                      child: Container(
+
+                        child: TextField(
+                          cursorWidth: 2,
+                          
+                          controller: messageController,
+                          keyboardType: TextInputType.multiline,
+                          maxLines: null,
+                          
+                          decoration: InputDecoration(
+                            contentPadding: EdgeInsets.symmetric(vertical:8, horizontal: 16),
+                              hintText: "Type message...",
+                              filled: true,
+                              fillColor: Colors.white38,
+                              hintStyle:
+                                  TextStyle(color: Colors.black),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30)
+                              )
+                            ),
+                        ),
                       ),
                     ),
                     SizedBox(width:16),
@@ -312,7 +320,7 @@ class MessageTile extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 18),
         decoration: BoxDecoration(
-            color:sendByMe? Colors.indigo: Colors.grey.shade300,
+            color:sendByMe? Colors.indigo: Colors.grey.shade100,
             borderRadius: sendByMe
                 ? BorderRadius.only(
                     topLeft: Radius.circular(25),
@@ -324,7 +332,7 @@ class MessageTile extends StatelessWidget {
                     bottomRight: Radius.circular(25))),
         child: Text(message,
             style: TextStyle(
-              color: Colors.white,
+              color: sendByMe? Colors.white: Colors.black,
               fontSize: 16,
             )),
       ),

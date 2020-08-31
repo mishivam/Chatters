@@ -35,6 +35,7 @@ dependencies:
   google_sign_in: ^4.5.1
   simple_animations: ^2.2.1
   supercharged: ^1.8.2
+  curved_navigation_bar:
   
 
 dev_dependencies:

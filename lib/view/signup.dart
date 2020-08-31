@@ -2,7 +2,7 @@ import 'package:chatters/services/database.dart';
 import 'package:chatters/services/firebaseAuth.dart';
 import 'package:chatters/services/sharedPreferenceFunction.dart';
 // import 'package:chatters/view/chatRoomScreen.dart';
-import 'package:chatters/view/mainScreen.dart';
+import 'package:chatters/view/mainPage.dart';
 import 'package:chatters/widget/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_text/gradient_text.dart';
